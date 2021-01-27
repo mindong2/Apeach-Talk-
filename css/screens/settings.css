@@ -1,0 +1,51 @@
+.settings__setting {
+  padding: 20px 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.settings-list {
+  padding: var(--horizontal-space);
+}
+
+.settings-list__sideline {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.settings__setting:last-child {
+  padding-bottom: 30px;
+  border: none;
+}
+
+.settings__setting i {
+  margin-right: 15px;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 20px;
+}
+
+.settings__setting-column:last-child {
+  opacity: 0.7;
+}
+
+.settings__setting-column {
+  position: relative;
+}
+
+.setting-newmark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: tomato;
+  position: absolute;
+  bottom: 0px;
+  left: 110px;
+}

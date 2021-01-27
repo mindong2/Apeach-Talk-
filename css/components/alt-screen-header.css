@@ -1,0 +1,45 @@
+.alt-screen-header {
+  padding: 0px 15px;
+  margin-top: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alt-screen-header__title {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+/* column이 3개일때 딱 정확하게 하는팁*/
+
+.alt-screen-header__column {
+  width: 33%;
+}
+
+.alt-screen-header__column:first-child {
+  margin-left: auto;
+}
+
+.alt-screen-header__column .alt-screen-header__title {
+  text-align: center;
+}
+
+.alt-screen-header__column:last-child {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.alt-screen-header__column span:last-child {
+  margin-left: 20px;
+}
+
+.chat-keyboard__icons:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--yellow);
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+}

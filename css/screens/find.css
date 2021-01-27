@@ -1,0 +1,138 @@
+.cog__dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 2.5px;
+  background-color: tomato;
+  position: absolute;
+  right: -7px;
+  bottom: 17px;
+}
+
+.header__title-bold {
+  font-weight: 500;
+}
+
+.find-recommended {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top: var(--border-1);
+  border-bottom: var(--border-1);
+}
+
+.find-recommended__top {
+  margin: 25px 0;
+  font-size: 14px;
+  color: var(--color-main);
+}
+
+.find-recommended__bottom {
+  margin: 100px 0;
+  font-size: 18px;
+  text-align: center;
+  color: var(--color-main);
+}
+
+.open-chat__header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  color: var(--color-main);
+}
+
+.open-post {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: var(--border-1);
+  padding-bottom: 15px;
+  margin-top: 15px;
+}
+
+.open-post__title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.open-post__hashtags {
+  text-transform: uppercase;
+  color: var(--color-main);
+  margin-bottom: 7px;
+}
+
+.open-post__members {
+  display: flex;
+  align-items: center;
+}
+
+.open-post__members img {
+  width: 16px;
+  height: 16px;
+  border-radius: 10px;
+  margin-right: 5px;
+}
+
+.open-post__members-count {
+  color: var(--color-main);
+  font-size: 14px;
+}
+
+.open-post__members .divider {
+  width: 1px;
+  height: 14px;
+  background-color: var(--color-main);
+  margin: 0px 5px;
+}
+
+.open-post__members-status {
+  color: var(--apeach);
+}
+
+.open-post__photo img {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+}
+
+.open-post__photo {
+  position: relative;
+}
+
+.open-post__photo-mark {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  border-radius: 20px;
+  bottom: 6px;
+  right: 6px;
+}
+
+@keyframes photomarkIconsAnimation {
+  0% {
+    transform: none;
+    color: #fff;
+  }
+  50% {
+    transform: scale(2);
+    color: rgb(224, 65, 65);
+  }
+  100% {
+    transform: none;
+    color: #fff;
+  }
+}
+
+.open-post__photo-mark i {
+  margin-right: 3px;
+}
+
+.open-post__photo:hover i {
+  animation: photomarkIconsAnimation 1s linear infinite;
+  will-change: transform;
+  /*그래픽 카드를 이용해 Animation을 가속화한다*/
+}

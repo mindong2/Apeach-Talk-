@@ -1,0 +1,95 @@
+.status-bar__column {
+  position: fixed;
+  width: 100%;
+}
+.nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  /*padding을 주면 그만큼의 공간을 사용할수
+  없기때문에 CSS는 크기를 맞추기 위해 남은 
+  공간을 늘리기 때문에 border-box로 사이즈를
+  맞춰야 우리가 원하는 크기를 볼수있음. */
+  background-color: #f9f9fa;
+  padding: 20px 50px;
+  border-top: 1px solid rgba(121, 121, 121, 0.3);
+}
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__link {
+  color: #2e363e;
+  position: relative;
+}
+
+@keyframes notificationAnimation {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: translateY(-5px) rotateY(180deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.nav__notification {
+  background-color: tomato;
+  /*span은 inline이기 때문에 width,height X*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  /*사각을 원으로 만드려면 width의 절반값*/
+  border-radius: 15px;
+  color: white;
+  font-weight: 600;
+  /*absolute는 부모가 relative이어야 한다.*/
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  animation: notificationAnimation 2s ease-in-out infinite;
+}
+.nav__notification2 {
+  background-color: tomato;
+  display: flex;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  position: absolute;
+  left: 30px;
+}
+
+@keyframes appearBtnAnimation {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.nav__btn {
+  animation: appearBtnAnimation 0.3s ease-in-out forwards;
+  transform: translateY(50px);
+  opacity: 0;
+}
+
+.nav__btn:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.nav__btn:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.nav__btn:last-child {
+  animation-delay: 0.8s;
+}

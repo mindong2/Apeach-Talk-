@@ -1,0 +1,216 @@
+#chat-screen {
+  background-color: #abc1d1;
+  height: 500vh;
+}
+
+#chat-screen .alt-screen-header,
+#chat-screen .status-bar {
+  top: 0px;
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #abc1d1;
+}
+
+.alt-screen-header__chat {
+  margin-top: 35px;
+}
+
+/*위에 status바와 
+header가 고정되어 있어서 같은 레이어가 아니다.
+main에 있는 content작성시 가려짐.*/
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.main-chat {
+  display: flex;
+  margin-top: 100px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.6s linear;
+}
+
+#chat-screen .status-bar {
+  z-index: 2;
+}
+
+#chat-screen .alt-screen-header {
+  z-index: 1;
+}
+
+.chat__timestamp {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 10px 15px;
+  color: #fff;
+  border-radius: 40px;
+  font-size: 14px;
+}
+
+.message-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.message-row img {
+  width: 50px;
+  height: 50px;
+  border-radius: 20px;
+}
+
+.message-row__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 10px;
+}
+
+.message-author {
+  font-size: 17px;
+  color: rgba(0, 0, 0, 0.6);
+  padding-top: 25px;
+  padding-bottom: 10px;
+}
+
+.message-info {
+  display: flex;
+}
+
+.message-bubble {
+  display: flex;
+  background-color: #fff;
+  font-weight: 500;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 15px;
+  border-top-left-radius: 0px;
+}
+
+.message-time {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-left: 8px 13px;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.message-row--own {
+  margin-top: 20px;
+  justify-content: flex-end;
+}
+
+.message-row--own .message-bubble {
+  background-color: var(--yellow);
+  border-top-right-radius: 0px;
+  border-top-left-radius: 15px;
+}
+
+.message-row--own .message-time {
+  margin-right: 5px;
+}
+
+.message-row--own .message-info {
+  flex-direction: row-reverse;
+}
+
+.reply {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+/* input이 width 100%를 갖기위해.*/
+.reply .reply__column:first-child {
+  width: 10%;
+}
+
+.reply .reply__column:last-child {
+  width: 90%;
+  position: relative;
+}
+
+.reply i {
+  opacity: 0.75;
+}
+
+.reply button i {
+  opacity: 1;
+}
+
+.reply input {
+  padding: 10px;
+  width: 98%;
+  border: var(--border-1);
+  border-radius: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.reply__column:last-child i,
+.reply__column:last-child button {
+  position: absolute;
+  right: -3px;
+  top: 2px;
+}
+
+.reply__column:last-child > i {
+  right: 40px;
+  top: 10px;
+}
+
+.reply__column:last-child button {
+  background-color: var(--yellow);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+}
+
+.reply__column:last-child button i {
+  top: 9px;
+  right: 6.5px;
+}
+
+.reply__column:last-child button:focus,
+.reply__column:last-child button:active {
+  outline: none;
+}
+
+.reply.reply__column:first-child,
+.reply .fa-smile-wink,
+.reply button {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-smile-wink,
+.reply:focus-within button {
+  opacity: 0;
+}
+
+.reply input:focus {
+  width: 95vw;
+  transform: translateX(-10%) translateY(-80px);
+}
+
+.reply:focus-within {
+  transform: translateY(80px);
+}
